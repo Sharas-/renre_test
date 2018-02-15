@@ -1,8 +1,9 @@
-def read(deals_file):
-    with open(deals_file) as f:
-        lines = f.read().spitlines()
-    if len(lines) == 0:
-        return []
-    return (lines[0].split(','), [l.split() for l in lines[1:])
+import csv
 
-        
+def read(deals_file):
+    with open(deals_file, 'r') as f:
+        reader = csv.reader(f)
+        cols = next(reader, None)
+        if cols is None:
+            return ([], [])
+        return (cols, list(reader))
