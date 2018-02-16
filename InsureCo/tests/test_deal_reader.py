@@ -1,10 +1,10 @@
 import sys
 import csv
-sys.path.append('..')
-import deal_reader as dr
+sys.path.append('../code')
+from modules import deal_reader as dr
 
 def test_deal_reader_returns_columns_and_all_lines():
-    fname = 'deals.csv'
+    fname = 'tmpdeals.csv'
     with open(fname, 'w') as f:
         writer = csv.writer(f)
         writer.writerows([["DealId","Company","Peril","Location"],

@@ -1,1 +1,6 @@
-{}
+{
+  "tests/test_contract_evaluator.py": true,
+  "tests/test_contract_reader.py": true,
+  "tests/test_deal_filter.py": true,
+  "tests/test_deal_reader.py": true
+}

@@ -1,11 +1,10 @@
 import sys
-sys.path.append('..')
+sys.path.append('../code')
+from modules import deal_filter as df
 
-import policy_filter as pf
-
-def test_affected_policies_found_by_adverse_event_type_and_location():
-    pcolumns=('DealId','Company','Peril','Location')
-    policies = [
+def test_affected_deals_found_by_adverse_event_type_and_location():
+    dcolumns=('DealId','Company','Peril','Location')
+    deals = [
         (1,'WestCoast','Earthquake','USA'),
         (2,'WestCoast','Hailstone','Canada'),
         (3,'AsianCo','Hurricane','Philippines'),
@@ -20,7 +19,7 @@ def test_affected_policies_found_by_adverse_event_type_and_location():
         ('Earthquake', 'USA'),
         ('Hurricane', 'Canada'),
         ('Hurricane', 'USA')]
-    (cols, affected) = pf.find_affected_policies(policies, pcolumns, adverse_events, ecolumns)
+    (cols, affected) = df.find_affected_deals((dcolumns, deals), (ecolumns, adverse_events))
     expected = [{1,'WestCoast','Earthquake','USA'},
                 {2,'WestCoast','Hailstone','Canada'},
                 {5,'GeorgiaInsurance','Hurricane','USA'}]
