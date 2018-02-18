@@ -1,0 +1,15 @@
+#Dependencies
+
+pandas 0.17.1 or later
+py.test 3 to run tests
+
+#Tests
+
+cd to 'tests' directory for each task (insureCo and renre) and run: py.test3
+
+#Implementation
+
+Both tasks implemented in stateless, functional "pipes & filters" fashion useful for ETL or batch processing jobs.
+Since both tasks belong in decision support part of domain, where data doesn't change very often, I presume performance is not the pressing concern.
+When reading large files, RAM can be a bottleneck though. One option to remedy this is to process data in smaller batches and feed it to modules peace meal: a kind of as map-reduce jobs that can potentially run in parallel.
+Another would by importing data into a data cube with some RDBMS and slicing/dicing data from there. Other would by to use hadoop with hive.
