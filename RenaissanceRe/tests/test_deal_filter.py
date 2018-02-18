@@ -16,7 +16,7 @@ def test_affected_deals_found_by_adverse_event_type_and_location():
                     ('Earthquake', 'Canada'),
                     ('Earthquake', 'USA'),
                     ('Hurricane', 'Canada'),
-                     ('Hurricane', 'USA')])
+                    ('Hurricane', 'USA')])
     (cols, affected) = df.find_affected_deals(deals, adverse_events)
     expected = [{1,'WestCoast','Earthquake','USA'},
                 {2,'WestCoast','Hailstone','Canada'},

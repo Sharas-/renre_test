@@ -1,5 +1,0 @@
-                    DEALID           COMPANY
-PERIL      LOCATION                         
-Earthquake USA           1         WestCoast
-Hailstone  Canada        2         WestCoast
-Hurricane  USA           5  GeorgiaInsurance

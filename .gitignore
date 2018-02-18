@@ -3,6 +3,7 @@
 *.pyc
 *.vim
 *.swo
+tmp*
 __pycache__/
 *.py[cod]
 *$py.class
